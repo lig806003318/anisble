@@ -1,0 +1,31 @@
+---
+
+- name: prepare {{ pro_default_path }}/{{ program_name_pre }}/{{ program_name_sub }}
+  file:
+     path: '{{ pro_default_path }}/{{ pro_path }}'
+     state: directory
+     mode: '0755'
+
+
+#- name:  clean {{dest}}
+#  file:
+#    path: '{{ dest }}'
+#    state: absent
+#  delegate_to: deploy
+
+
+- name:  git clone {{ repo }}
+  git:
+   repo: '{{ repo }}'
+   dest: '{{ pro_default_path }}/{{ pro_path }}'
+   version: '{{ version }}'
+   update: yes
+  register: git_return
+  run_once: true
+
+- name: get git commit number
+  debug:
+    msg:
+      - git commit before  "{{ git_return.before }}"
+      - git commit after   "{{ git_return.after }}"
+  run_once: true

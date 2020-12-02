@@ -1,0 +1,14 @@
+---
+repo: https://besthappyplatform.visualstudio.com/AntMoney/_git/AntMoneyBackend
+pro_default_path: project
+pro_path: mywk88/admin
+package_name: mywk88.jar
+version: master
+
+nginx_vhost_path: /usr/local/nginx/conf/vhost
+
+
+api1: 172.16.249.11
+api2: 172.16.249.10
+
+

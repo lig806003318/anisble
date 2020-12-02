@@ -1,0 +1,28 @@
+---
+- name: config
+  template:
+    src: application-env.prop.j2
+    dest: "{{ pro_default_path }}/{{ pro_path }}/ant-enterprise/ant-money/src/main/resources/application-prod8.yml"
+  delegate_to: deploy
+
+
+
+- name: get now time
+  shell: 'date "+%Y-%m-%d--%H:%M"'
+  delegate_to: localhost
+  register: now_time
+  run_once: True
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+- name: Sync test
+  hosts: "{{groups['dep'][0]}}"
+
+  tasks:
+    - name: copy file to b
+      tags: sync-push
+      synchronize:
+        src:  /zeus/org/
+        dest: /zeus/mywk1/

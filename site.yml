@@ -1,0 +1,6 @@
+---
+- name:  mywk1-admin
+  hosts: all
+  gather_facts: no
+  roles:
+      - { role: mywk1-admin, tags: mywk1-admin }

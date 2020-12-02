@@ -1,0 +1,22 @@
+---
+- name: git clone {{repo}} {{dest}}
+  import_tasks: 'roles/include/git-clone.yml'
+  delegate_to: deploy
+
+
+- name: compile
+  shell: mvn clean && mvn package
+  args:
+     chdir: "{{ pro_default_path }}/{{ pro_path }}/ant-enterprise/"
+  delegate_to: deploy
+
+
+
+
+
+
+
+
+
+
+

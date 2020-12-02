@@ -1,0 +1,13 @@
+---
+#api1
+- name: close  {{ program_package }} process
+  shell: |
+     "ps -ef | grep '{{ package_name }}'| grep -v grep |awk '{print $4}' |  xargs kill -9 >> dev/null"
+  delegate_to: '{{ item }}'
+  ignore_errors: true
+  run_once: true
+  loop: "{{ groups['n1'] }}"
+
+
+
+

@@ -1,0 +1,5 @@
+---
+#- include_tasks: roles/mywk1-admin/tasks/build.yml
+#- include_tasks: roles/mywk1-admin/tasks/config.yml
+- include_tasks: roles/mywk1-admin/tasks/deploy.yml
+

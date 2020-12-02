@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="576e99e5-afff-4349-8f8a-af328bc94d5f" name="10code">
+        <fileTransfer rootFolder="/zeus/ansible" accessType="SFTP" host="192.168.1.10" port="22" sshConfigId="9409a8c7-6343-4f80-8bac-217d8747e0f4" sshConfig="root@192.168.1.10:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
